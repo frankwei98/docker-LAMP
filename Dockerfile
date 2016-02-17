@@ -10,9 +10,6 @@ RUN apt-get -y install apache2
 # install php
 RUN apt-get install -y php5 libapache2-mod-php5
 
-# Install MBstring
-RUN apt-get install mbstring php-mbstring -y
-
 # Install Mcrypt
 RUN apt-get install mcrypt php-mcrypt -y
 
