@@ -4,10 +4,12 @@ MAINTAINER Frank Wei
 # Install EPEL
 RUN rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 
-# Install HTTPD
-RUN yum install httpd mod_ssl -y
+# install httpd
+RUN yum -y install httpd vim-enhanced bash-completion unzip
 
-# Install PHP
+RUN echo "NETWORKING=yes" > /etc/sysconfig/network
+
+# install php
 RUN yum install -y php php-mysql php-devel php-gd php-pecl-memcache php-pspell php-snmp php-xmlrpc php-xml
 
 # Install MBstring
