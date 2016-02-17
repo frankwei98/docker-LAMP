@@ -32,4 +32,4 @@ ADD httpd.conf /etc/httpd/conf/httpd.conf
 
 EXPOSE 80
 
-CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
+CMD ["/etc/init.d/apache2 start"]
