@@ -1,28 +1,26 @@
-FROM centos:7
+FROM ubuntu:trusty
 MAINTAINER Frank Wei
 
 # Install EPEL
 RUN rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 
-RUN yum -y update
+RUN apt-get -y update
 
-RUN yum -y install yum-plugin-priorities yum-plugin-fastestmirror
+RUN apt-get -y install vim tar
 
-RUN yum -y install vim tar
-
-RUN yum -y install httpd
+RUN apt-get -y install httpd
 
 # install php
-RUN yum install -y php php-mysql php-devel php-gd php-pecl-memcache php-pspell php-snmp php-xmlrpc php-xml
+RUN apt-get install -y php php-mysql php-devel php-gd php-pecl-memcache php-pspell php-snmp php-xmlrpc php-xml
 
 # Install MBstring
-RUN yum install mbstring php-mbstring -y
+RUN apt-get install mbstring php-mbstring -y
 
 # Install Mcrypt
-RUN yum install mcrypt php-mcrypt -y
+RUN apt-get install mcrypt php-mcrypt -y
 
 # Install wget and tar
-RUN yum install wget tar -y
+RUN apt-get install wget tar -y
 
 # Add IonCube Loaders
 RUN mkdir /tmp/ioncube_install
