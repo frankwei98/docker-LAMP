@@ -4,10 +4,13 @@ MAINTAINER Frank Wei
 # Install EPEL
 RUN rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 
-# install httpd
-RUN yum -y install httpd vim-enhanced bash-completion unzip
+RUN yum -y update
 
-RUN echo "NETWORKING=yes" > /etc/sysconfig/network
+RUN yum -y install yum-plugin-priorities yum-plugin-fastestmirror
+
+RUN yum -y install vim tar
+
+RUN yum -y install httpd
 
 # install php
 RUN yum install -y php php-mysql php-devel php-gd php-pecl-memcache php-pspell php-snmp php-xmlrpc php-xml
