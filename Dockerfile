@@ -5,7 +5,7 @@ RUN apt-get -y update
 
 RUN apt-get -y install vim tar
 
-RUN apt-get -y install httpd
+RUN apt-get -y install apache2
 
 # install php
 RUN apt-get install -y php php-mysql php-devel php-gd php-pecl-memcache php-pspell php-snmp php-xmlrpc php-xml
