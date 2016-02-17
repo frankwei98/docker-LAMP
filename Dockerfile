@@ -1,9 +1,6 @@
 FROM ubuntu:trusty
 MAINTAINER Frank Wei
 
-# Install EPEL
-RUN rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-
 RUN apt-get -y update
 
 RUN apt-get -y install vim tar
