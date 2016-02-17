@@ -8,7 +8,7 @@ RUN apt-get -y install vim tar
 RUN apt-get -y install apache2
 
 # install php
-RUN apt-get install -y php php-mysql php-devel php-gd php-pecl-memcache php-pspell php-snmp php-xmlrpc php-xml
+RUN apt-get install -y php5 libapache2-mod-php5
 
 # Install MBstring
 RUN apt-get install mbstring php-mbstring -y
