@@ -1,11 +1,10 @@
-FROM centos:6
+FROM centos:7
 MAINTAINER Frank Wei
+
+# Install EPEL
 
 # Install HTTPD
 RUN yum install httpd mod_ssl php* -y
-
-# Install EPEL
-RUN rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
 
 # Install MBstring
 RUN yum install mbstring php-mbstring -y
