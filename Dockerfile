@@ -32,4 +32,4 @@ ADD httpd.conf /etc/httpd/conf/httpd.conf
 
 EXPOSE 80
 
-CMD ["/etc/init.d/apache2 start"]
+CMD ["service apache2 start"]
